@@ -5,10 +5,10 @@ $(document).ready(function () {
 
     function displayInfo() {
 
-        var feel = $(this).data("search");
-        console.log(feel);
+        var exotic = $(this).data("search");
+        console.log(exotic);
 
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feel + "&api_key=bHTJ7xiMk2Qs1I8PRd2sst2o7MR1qlsi";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + exotic + "&api_key=bHTJ7xiMk2Qs1I8PRd2sst2o7MR1qlsi";
 
         console.log(queryURL);
 
@@ -32,8 +32,8 @@ $(document).ready(function () {
                     var defaultSrc = results[i].images.fixed_height.url;
                     var staticSrc = results[i].images.fixed_height_still.url;
                     var exoticAnimalImage = $("<img>");
-                    var p = $("<p>").text("exoticAnimal: " + Exotic + " |" + "  Rating: " + rating);
-
+                    var p = $("<p>").text("exoticAnimal: " + exotic + " |" + "  Rating: " + rating);
+//gif needs to animate 
                     exoticAnimalImage.attr("src", staticSrc);
                     exoticAnimalImage.attr("data-still", staticSrc);
                     exoticAnimalImage.attr("data-animate", defaultSrc);
@@ -42,17 +42,17 @@ $(document).ready(function () {
 
                     gifDiv.append(p);
                     gifDiv.append(exoticAnimalImage);
-                    $("#gifArea").prepend(gifDiv);
+                    $("#mainArea").prepend(gifDiv);
 
-
+//needs to display new input of user 
                 }
             });
     }
 
     $("#addExotic").on("click", function (event) {
         event.preventDefault();
-        var newexoticAnimal = $("#exoticAnimalInput").val().trim();
-        topics.push(newexoticAnimal);
+        var newExoticAnimal = $("#exoticAnimalInput").val().trim();
+        topics.push(newExoticAnimal);
         console.log(topics);
         $("#exoticAnimalInput").val('');
         displayButtons();

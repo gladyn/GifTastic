@@ -11,35 +11,34 @@ body {
   } 
 
   h1{
+    font-size: 70px;
     font-weight: 500;
-    font-size: 50px;
    text-align: center;
   }
 
 
   label {
-    font-weight: 500;
     font-size: 20px;
-    font-weight: bold;
-    
-
+    font-weight: 700;
+    font-weight: bolder;
+  
   }
 
   p {
     font-weight: 500;
     font-size: 20px;
     font-weight: bold;
-    background-color: #D3A4FB;
-    color: grey;
+    background-color: green;
+    color: black;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
   }
 
 
-#feel{
+#exotic{
     width: 100px;
-    color: #D3A4FB;
+    color: greenyellow;
     background-color: black; 
     outline: 0 !important;
     border: none;
@@ -79,7 +78,3 @@ form {
     background-color:#8B749E !important;
 }
   
-body {
-    
-    background-color: antiquewhite;
-}
